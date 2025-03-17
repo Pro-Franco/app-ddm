@@ -1,7 +1,11 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
 # dependencies
+app/index1.tsx
+components/dinamicForm
+
 node_modules/
+
 
 # Expo
 .expo/
