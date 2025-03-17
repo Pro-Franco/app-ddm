@@ -2,7 +2,7 @@
 
 # dependencies
 app/index1.tsx
-components/dinamicForm
+components/dinamicForm.tsx
 
 node_modules/
 
