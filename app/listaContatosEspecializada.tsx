@@ -11,7 +11,7 @@ import {
   updateContact,
 } from '../components/database/database';
 
-export default function App() {
+export default function ListaContatosEspecializada() {
   const [listContact, setListContact] = useState<
     { name: string; cell: string }[]
   >([]);

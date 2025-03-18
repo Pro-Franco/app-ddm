@@ -4,17 +4,14 @@ import { Welcome } from '@/components/welcome';
 import { Button as B1 } from 'react-native-paper';
 import PlacarFutebol from '@/components/placarFutebol';
 
-export default function Index() {
+export default function ImageButton() {
   function handleClick() {
     console.log('Clicou');
-    Alert.alert('Clicou');
+
     return;
   }
-
-  function handleClick2() {
+  function handleclick2() {
     console.log('Clicou 2');
-    Alert.alert('Clicou 2');
-    return;
   }
 
   return (
@@ -39,25 +36,8 @@ export default function Index() {
       />
       <View style={styles.button}>
         <Button title="clique aqui" onPress={handleClick} />
-        <Button title="clique aqui 2" onPress={() => {}} />
+        <Button title="botao 2" onPress={() => console.log('Clicou')} />
       </View>
-
-      <B1
-        style={styles.button}
-        mode="contained"
-        compact={false}
-        onPress={handleClick}
-      >
-        Clique aqui
-      </B1>
-      <B1
-        style={styles.button}
-        icon="camera"
-        mode="contained"
-        onPress={() => console.log('Pressed')}
-      >
-        Press me
-      </B1>
     </View>
   );
 }
@@ -85,6 +65,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 20,
+    marginBottom: 20,
     marginHorizontal: 20,
     borderRadius: 8,
   },

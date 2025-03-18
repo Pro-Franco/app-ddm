@@ -8,7 +8,7 @@ type Contact = {
   number: number;
 };
 
-export default function App() {
+export default function ListaContatos() {
   const [listContact, setListContact] = useState<Contact[]>([]);
   const [textInputName, setTextInputName] = useState<string>('');
   const [textInputNumber, setTextInputNumber] = useState<string>('');
