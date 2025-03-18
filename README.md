@@ -3,11 +3,11 @@
 Como executar os exemplos: Faça o import e altere o nome dentro do return como no exemplo abaixo.
 
 -------------------
-import TelaValidCadastro from './telaValidCadastro';
+#import TelaValidCadastro from './telaValidCadastro';
 
-export default function Index() {
-  return <TelaValidCadastro />;
-}
+#export default function Index() {
+#  return <TelaValidCadastro />;
+#}
 -----------------------------
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
