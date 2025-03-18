@@ -1,9 +1,7 @@
 # Repositorio de codigo fontes feitos em sala!
 
-Como executar os exemplos: Faça o import e altere o nome dentro do return como no exemplo abaixo.
-
--------------------
-#import TelaValidCadastro from './telaValidCadastro';
+Como executar os exemplos: 
+      Faça o import e altere o nome dentro do return como no exemplo abaixo.
 
 
 ![image](https://github.com/user-attachments/assets/a9c4a754-c34c-477a-a154-91b410a5e50d)
