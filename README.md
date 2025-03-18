@@ -7,15 +7,15 @@ Como executar os exemplos:
 ![image](https://github.com/user-attachments/assets/a9c4a754-c34c-477a-a154-91b410a5e50d)
 
 
-## Get started
+## Iniciar o projeto
 
-1. Install dependencies
+1. Instalar todas as dependencias
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Executar o projeto no expo/GO
 
    ```bash
     npx expo start
