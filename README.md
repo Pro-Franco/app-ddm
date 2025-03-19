@@ -30,14 +30,11 @@ Como executar os exemplos:
    ```bash
    npm install
    ```
-
 2. Executar o projeto no expo/GO
 
    ```bash
     npx expo start
    ```
-<<<<<<< HEAD
-
 # Correção de erros de execução de script no windows.
 ## Com o PowerShell do windows aberto faça:
 
