@@ -38,10 +38,11 @@ Como executar os exemplos:
 # Correção de erros de execução de script no windows.
 ## Com o PowerShell do windows aberto faça:
 
-1 - Veririque a politica atual
+1 - Veririque a politica atual.
 
       Get-ExecutionPolicy
 
-2 - Liberar a execução e scripts
+2 - Liberar a execução e scripts.
 
       Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+3 - Verifique se esta na pasta do projeto.
