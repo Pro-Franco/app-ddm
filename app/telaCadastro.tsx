@@ -12,6 +12,7 @@ export default function TelaCadastro() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [endereco, setEndereco] = useState('');
 
   const handleCadastro = () => {
     if (nome && email && senha) {
@@ -46,6 +47,13 @@ export default function TelaCadastro() {
         secureTextEntry
         value={senha}
         onChangeText={setSenha}
+      />
+
+      <TextInput
+        placeholder="Endereco do local"
+        value="endereco"
+        onChangeText={setEndereco}
+        style={styles.input}
       />
 
       <Pressable

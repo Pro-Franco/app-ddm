@@ -6,7 +6,7 @@ import Curtidas from '@/components/curtidas';
 import DadosUsuariosFlat from '@/components/dadosUsuariosFlat';
 import DadosUsuariosMap from '@/components/dadosUsuariosMap';
 
-export default function Index() {
+export default function PrgMap() {
   return (
     <View style={styles.container}>
       <DadosUsuariosMap />

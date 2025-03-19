@@ -9,7 +9,7 @@ export default function Cadastro() {
 
   // Função para validar e habilitar o botão
   const validateForm = () => {
-    const emailValid = email.includes('@');
+    const emailValid = email.includes('@gmail');
     const senhaValid = senha.length >= 6;
     const nomeValid = nome.length > 0;
 
