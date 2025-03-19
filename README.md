@@ -1,14 +1,16 @@
 # Repositorio de codigo fontes feitos em sala!
 
-![image](https://github.com/user-attachments/assets/537f9311-d8e9-4411-8658-7ea24ba67216)
+![image](https://github.com/user-attachments/assets/5092986c-724f-4f29-b329-8dc3319e3d56)
 
-<<<<<<< HEAD
+
+
 Como executar os exemplos:
 Faça o import e altere o nome dentro do return como no exemplo abaixo.
 
 ![image](https://github.com/user-attachments/assets/a9c4a754-c34c-477a-a154-91b410a5e50d)
 
-=======
+
+
 
 
 
