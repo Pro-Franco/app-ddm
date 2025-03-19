@@ -21,7 +21,6 @@ Como executar os exemplos:
 ![image](https://github.com/user-attachments/assets/a9c4a754-c34c-477a-a154-91b410a5e50d)
 
 
->>>>>>> 30c9c892301da15644af0c3a0fc49f57cb693e24
 ## Iniciar o projeto
 
 1. Instalar todas as dependencias
@@ -38,7 +37,7 @@ Como executar os exemplos:
 <<<<<<< HEAD
 
 # Correção de erros de execução de script no windows.
-Com o PowerShell do windows aberto faça:
+## Com o PowerShell do windows aberto faça:
 
 1 - Veririque a politica atual
 
@@ -47,8 +46,3 @@ Com o PowerShell do windows aberto faça:
 2 - Liberar a execução e scripts
 
       Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-
-
-=======
-
->>>>>>> 30c9c892301da15644af0c3a0fc49f57cb693e24
