@@ -47,5 +47,6 @@ Como executar os exemplos:
       Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 3 - Verifique se esta na pasta do projeto.
 Verificando se todas as bibliotecas foram instaladas
+
       npx expo install --check
 
