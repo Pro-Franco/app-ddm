@@ -49,4 +49,7 @@ Como executar os exemplos:
 Verificando se todas as bibliotecas foram instaladas
 
       npx expo install --check
+      
+4 - Limpando o Cache (memoria)
 
+      npx expo start --clear
