@@ -116,6 +116,7 @@ const PrgContatos = () => {
       {/* Campo de entrada para o nome do contato */}
       <TextInput
         style={styles.input}
+        underlineColorAndroid="transparent"
         value={contato}
         onChangeText={setContato} // Atualiza o estado 'contato' sempre que o texto mudar
         placeholder="Digite o nome do contato"
@@ -124,6 +125,7 @@ const PrgContatos = () => {
       {/* Campo de entrada para o e-mail do contato */}
       <TextInput
         style={styles.input}
+        underlineColorAndroid="transparent"
         value={email}
         onChangeText={setEmail} // Atualiza o estado 'email' sempre que o texto mudar
         placeholder="Digite o email"
@@ -131,7 +133,7 @@ const PrgContatos = () => {
 
       {/* Botão para adicionar ou editar o contato */}
       <Button
-        title={idEditando ? 'Salvar Alterações' : 'Adicionar'}
+        title={idEditando ? 'Salvar Alterações' : 'Adicionar'} // Define o texto do botão dependendo do estado
         onPress={idEditando ? EditarItem : Adicionar} // Chama a função de editar ou adicionar dependendo do estado
       />
 
@@ -141,16 +143,26 @@ const PrgContatos = () => {
         keyExtractor={(item) => item.id} // Define o id como chave única para cada item
         renderItem={({ item }) => (
           <View style={styles.item}>
-            <Text>{item.contato} - </Text>
-            <Text>{item.email}</Text>
-            <View style={styles.item}>
+            <Text style={styles.text}>{item.contato} - </Text>
+            <Text style={styles.text}>{item.email}</Text>
+            <View style={styles.itemPress}>
               {/* Botão para editar o contato */}
               <Pressable onPress={() => Editar(item)}>
-                <MaterialIcons name="edit" size={24} color="blue" />
+                <MaterialIcons
+                  style={styles.iconButton}
+                  name="edit"
+                  size={14}
+                  color="blue"
+                />
               </Pressable>
               {/* Botão para remover o contato */}
               <Pressable onPress={() => removerItem(item.id)}>
-                <MaterialIcons name="delete" size={24} color="red" />
+                <MaterialIcons
+                  style={styles.iconButton}
+                  name="delete"
+                  size={14}
+                  color="red"
+                />
               </Pressable>
             </View>
           </View>
@@ -162,33 +174,59 @@ const PrgContatos = () => {
 
 // Estilos para o layout do aplicativo
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, paddingTop: 50 }, // Container com padding
+  container: {
+    flex: 1,
+    padding: 20,
+    paddingTop: 50,
+  }, // Container com padding
   titulo: {
     fontSize: 24,
     fontWeight: 'bold',
+    color: '#301455',
     marginBottom: 20,
     textAlign: 'center', // Título centralizado
   },
   input: {
     width: '100%',
-    height: 14,
+    height: 40,
+    borderColor: '#301455',
     borderWidth: 1,
-    borderColor: '#081020',
+    borderRadius: 8,
+    paddingHorizontal: 15,
+    marginBottom: 15,
     backgroundColor: '#fff',
-    padding: 10,
-    marginBottom: 10,
-    borderRadius: 8, // Estilo do input com bordas arredondadas
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  text: {
+    fontWeight: 'bold',
+    fontSize: 16,
   },
   item: {
+    marginTop: 5,
+    marginBottom: 5,
     alignItems: 'center',
     padding: 5,
     flexDirection: 'row',
     justifyContent: 'space-between', // Itens alinhados de forma que um fica à esquerda e o outro à direita
+    backgroundColor: '#fff',
   },
-  button: {
-    backgroundColor: '#081020',
+  itemPress: {
+    flexDirection: 'row',
     padding: 10,
     borderRadius: 8, // Estilo do botão com bordas arredondadas
+    gap: 4,
+  },
+  iconButton: {
+    // backgroundColor: '#e0e0e0',
+    //width: 45,
+    //height: 45,
+    borderWidth: 1,
+    borderColor: '#301455',
+    borderRadius: 14, // Círculo perfeito
+    padding: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

@@ -1,6 +1,4 @@
-import PrgContatos from './prgContatos';
-import TelaCadastro from './telaCadastro';
-import TelaCadModerna from './telaCadModerna';
+import PrgContatos from './5prgContatos';
 
 export default function Index() {
   return <PrgContatos />;
