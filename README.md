@@ -1,14 +1,16 @@
 # Repositorio de codigo fontes feitos em sala!
 
-![image](https://github.com/user-attachments/assets/537f9311-d8e9-4411-8658-7ea24ba67216)
+![image](https://github.com/user-attachments/assets/5092986c-724f-4f29-b329-8dc3319e3d56)
 
-<<<<<<< HEAD
+
+
 Como executar os exemplos:
 Faça o import e altere o nome dentro do return como no exemplo abaixo.
 
 ![image](https://github.com/user-attachments/assets/a9c4a754-c34c-477a-a154-91b410a5e50d)
 
-=======
+
+
 
 
 
@@ -21,7 +23,6 @@ Como executar os exemplos:
 ![image](https://github.com/user-attachments/assets/a9c4a754-c34c-477a-a154-91b410a5e50d)
 
 
->>>>>>> 30c9c892301da15644af0c3a0fc49f57cb693e24
 ## Iniciar o projeto
 
 1. Instalar todas as dependencias
@@ -29,13 +30,26 @@ Como executar os exemplos:
    ```bash
    npm install
    ```
-
 2. Executar o projeto no expo/GO
 
    ```bash
     npx expo start
    ```
-<<<<<<< HEAD
-=======
+# Correção de erros de execução de script no windows.
+## Com o PowerShell do windows aberto faça:
 
->>>>>>> 30c9c892301da15644af0c3a0fc49f57cb693e24
+1 - Veririque a politica atual.
+
+      Get-ExecutionPolicy
+
+2 - Liberar a execução e scripts.
+
+      Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+3 - Verifique se esta na pasta do projeto.
+Verificando se todas as bibliotecas foram instaladas
+
+      npx expo install --check
+      
+4 - Limpando o Cache (memoria)
+
+      npx expo start --clear
