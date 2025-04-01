@@ -1,20 +1,68 @@
 import { useState } from 'react';
-import { Text, View, Button, TextInput, Alert, StyleSheet } from 'react-native';
+import {
+  Text,
+  View,
+  Button,
+  TextInput,
+  Alert,
+  StyleSheet,
+  FlatList
+} from 'react-native';
+
+type Contato = {
+  id: string;
+  contato: string;
+  email: string;
+};
 
 const PrgContatos = () => {
   const [contato, setContato] = useState('');
   const [email, setEmail] = useState('');
   const [idEditando, setIdEditando] = useState('');
-  const [dados, setDados] = useState([]);
+  const [dados, setDados] = useState<Contato[]>([]);
 
   function adicionar() {
-    Alert.alert('Contato adicionado');
-    console.log(dados);
+    if (contato && email) {
+      const novoContato = {
+        id: Date.now().toString(),
+        contato,
+        email
+      };
+      const novaLista = [...dados, novoContato];
+      setDados(novaLista);
+      setContato('');
+      setEmail('');
+    }
   }
+  const remover = (id: string) => {
+    const novaLista = dados.filter((item) => item.id !== id);
+
+    setDados(novaLista);
+  };
+
+  const editar = (item: Contato) => {
+    setContato(item.contato);
+    setEmail(item.email);
+    setIdEditando(item.id);
+  };
+
+  const esditarItem = () => {
+    if (idEditando && contato && email) {
+      const novaLista = dados.map((item) =>
+        item.id === idEditando ? { ...item, contato, email } : item
+      );
+      setDados(novaLista);
+      setIdEditando('');
+      setContato('');
+      setEmail('');
+    }
+  };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Castro de Contatos</Text>
+      <Text style={styles.titulo}>
+        {idEditando ? 'Editar contato' : 'Adicionar contato'}
+      </Text>
 
       <TextInput
         style={styles.input}
@@ -30,7 +78,26 @@ const PrgContatos = () => {
         placeholder="Digite o e-mail do contato"
       />
 
-      <Button title="Adicionar" onPress={adicionar} />
+      <Button
+        title={idEditando ? 'Salvar registro' : 'Adicionar'}
+        onPress={idEditando ? esditarItem : adicionar}
+      />
+
+      <View>
+        <FlatList
+          data={dados}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <View style={styles.flatList}>
+              <Text style={styles.text}>{item.contato}</Text>
+              <Text style={styles.text}>{item.email}</Text>
+              <Button title="editar" onPress={() => editar(item)} />
+              <Button title="excluir" onPress={() => remover(item.id)} />
+            </View>
+          )}
+        />
+        <View></View>
+      </View>
     </View>
   );
 };
@@ -38,12 +105,12 @@ const PrgContatos = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
+    padding: 10
   },
   titulo: {
     fontSize: 24,
     fontWeight: 'bold',
-    textAlign: 'center',
+    textAlign: 'center'
   },
   input: {
     marginTop: 10,
@@ -51,8 +118,20 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#1a79f5',
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
+  flatList: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+    marginBottom: 5,
+    fontSize: 10,
+    gap: 10
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: 'bold'
+  }
 });
 
 //*
