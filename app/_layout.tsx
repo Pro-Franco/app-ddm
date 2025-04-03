@@ -11,6 +11,7 @@ export default function Layout() {
       }}
     >
       <Stack.Screen name="index" options={{ title: 'home' }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="dashboard" options={{ title: 'dashboard' }} />
       <Stack.Screen name="profile" options={{ title: 'Perfil' }} />
     </Stack>

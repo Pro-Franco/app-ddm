@@ -9,6 +9,7 @@ export default function Home() {
       <Text> Pagina home</Text>
       <Link href={'/profile'}> ir para Profile</Link>
       <Link href={'/settings'}> ir para Configuracoes</Link>
+      <Link href={'(tabs)'}> ir para tabs</Link>
       <Button title="ir Configurações" onPress={irConfigura} />
     </View>
   );
